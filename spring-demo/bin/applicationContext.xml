@@ -6,5 +6,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-	<bean id="myCoach" class="com.palani2code.demo.CricketCoach"/>
+    
+    <bean id="fortune" class="com.palani2code.demo.HappyFortuneService"/>
+    
+	<bean id="myCoach" class="com.palani2code.demo.CricketCoach">
+		<constructor-arg ref="fortune"></constructor-arg>
+	</bean>
 </beans>    
